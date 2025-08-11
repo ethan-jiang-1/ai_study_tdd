@@ -413,22 +413,22 @@ AI 时代的**核心转变**在于，利用 AI 编码工具将这些“减速带
 ```mermaid
 graph TD
     subgraph "心智模式: 测试设计"
-        A["1. 手动创建/打开\n`test.js`文件"];
-        A --> B["2. 手动编写\n测试骨架和断言"];
+        A["1. 手动创建/打开\n`test.js`文件"]
+        A --> B["2. 手动编写\n测试骨架和断言"]
     end
-    B --> C{运行测试 (失败)};
+    B --> C{运行测试 (失败)}
 
     subgraph "心智模式: 功能实现"
-        C -- "上下文切换" --> D["4. 手动打开\n`impl.js`文件"];
-        D --> E["5. 手动编写\n最简单的实现代码"];
+        C -- "上下文切换" --> D["4. 手动打开\n`impl.js`文件"]
+        D --> E["5. 手动编写\n最简单的实现代码"]
     end
-    E --> F{运行测试 (通过)};
+    E --> F{运行测试 (通过)}
 
     subgraph "心智模式: 代码优化"
-        F -- "上下文切换" --> G["7. 在`impl.js`中\n思考并手动重构"];
-        G --> H["8. 在`test.js`中\n可能需要调整测试"];
+        F -- "上下文切换" --> G["7. 在`impl.js`中\n思考并手动重构"]
+        G --> H["8. 在`test.js`中\n可能需要调整测试"]
     end
-    H --> I{再次运行所有测试 (通过)};
+    H --> I{再次运行所有测试 (通过)}
 
     style A fill:#f8d7da,stroke:#721c24
     style D fill:#f8d7da,stroke:#721c24
@@ -439,11 +439,11 @@ graph TD
 ```mermaid
 graph TD
     subgraph "统一的开发心流 (AI-Native IDE)"
-        A["1. 写下意图 (注释/函数名)"];
-        A -- "Cmd+K: '生成测试'" --> B["2. AI 生成测试 (红灯)"];
-        B -- "Cmd+K: '实现功能'" --> C["3. AI 生成实现 (绿灯)"];
-        C -- "Cmd+K: '重构这段代码'" --> D["4. AI 即时重构"];
-        D --> E{所有测试通过};
+        A["1 写下意图 (注释/函数名)"]
+        A -- "Cmd+K: '生成测试'" --> B["2 AI 生成测试 (红灯)"]
+        B -- "Cmd+K: '实现功能'" --> C["3 AI 生成实现 (绿灯)"]
+        C -- "Cmd+K: '重构这段代码'" --> D["4 AI 即时重构"]
+        D --> E{所有测试通过}
     end
     style A fill:#d1ecf1,stroke:#0c5460
     style B fill:#d1ecf1,stroke:#0c5460
@@ -751,7 +751,8 @@ graph TD
     end
 
     style E fill:#fffbe6,stroke:#faad14
-    style I fill:#f6ffed,stroke:#52c41a```
+    style I fill:#f6ffed,stroke:#52c41a
+```
 ---
 
 ### **维度七：从“代码信任”到“契约验证” (From Code Trust to Contract Verification)**
@@ -797,7 +798,7 @@ AI 时代的**核心转变**在于，我们可以利用 AI 大幅降低**“消�
 > 请使用 Pact.js 的 `Matchers` 来定义响应体，以增加测试的灵活性。”
 
 **AI (Claude / Copilot) 生成的 Pact.js 测试代码：**
-```
+
 ```javascript
 import { PactV3, MatchersV3 } from '@pact-foundation/pact';
 import { UserApiClient } from './user-api-client';
